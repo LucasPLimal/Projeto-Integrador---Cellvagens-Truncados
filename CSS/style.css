@@ -1,0 +1,16 @@
+body {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h5 {
+  color: #6b2cbe;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+.paragrafo{
+    text-align: justify;
+    font-size: 15px;
+}
