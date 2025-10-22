@@ -8,10 +8,12 @@
   --bs-indigo-700: #3d0a91;
   --bs-indigo-800: #290661;
   --bs-indigo-900: #140330;
+  --accent: #7be4c7;
+  --muted: #bfb6f8;
 }
 
 /* Classes utilitárias */
-.bg-indigo { background-color: var(--bs-indigo) !important; }
+.bg-indigo { background-color: var(--bs-indigo-700) !important; }
 .bg-indigo-100 { background-color: var(--bs-indigo-100) !important; }
 .bg-indigo-200 { background-color: var(--bs-indigo-200) !important; }
 .bg-indigo-300 { background-color: var(--bs-indigo-300) !important; }
@@ -35,6 +37,23 @@ body {
   scroll-behavior: smooth; 
 }
 
+/* Layout & typography */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h5 {
+  color: var(--bs-indigo-100);
+}
+
+/* Hero */
+.hero-graphic {
+  max-width: 420px;
+  opacity: 0.95;
+}
+
 h1, h2, h5 {
   color: var(--bs-indigo-100);
 }
@@ -51,4 +70,49 @@ p {
     text-align: justify;
     font-size: 15px;
     color: var(--bs-indigo-200);
+    line-height: 1.6;
+}
+
+/* Cards and utilities */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.hover-zoom img {
+  transition: transform 300ms ease;
+}
+.hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--bs-indigo-500), var(--bs-indigo-400));
+  border: none;
+}
+.btn-outline-light {
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* Small animations for sections */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card-img-top { height: 140px; }
+  .hero-graphic { max-width: 320px; }
 }
