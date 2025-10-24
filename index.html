@@ -1,159 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="CSS/style.css">
+  <title>Projeto Integrador - Cellvagens Tronkudos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="CSS/style.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="bg-indigo-800">
+  <!-- Hero Section -->
+  <section class="hero py-1 mt-0 mx-2">
+    <div class="container hero-top">
+      <h1>Bem vindo ao <br><span>Cellvagens Tronkudos!!</span></h1>
+      <p>O site que ensina e compartilha informações <br> sobre células-tronco.</p>
+    </div>
+    <div class="container hero-bottom">
+      <button class="btn-purple" data-bs-toggle="modal" data-bs-target="#videoModal">Video Introdutório!</button>
+      <img src="IMAGES/cell-test-3.png" alt="" class="hero-image">
+    </div>
+  </section>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#hero">
-        <img src="IMAGES/Boss_Stem_Cell_Icon.webp" width="36" height="36" alt="Ícone células-tronco" class="me-2 rounded-circle">
-        <span class="fw-bold">Cellvagens Tronkudos</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#hero">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tipos">Tipos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
-        </ul>
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white py-1" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/xiEALKjf6uE" title="Vídeo Introdutório" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <main class="container my-5">
-    <!-- Sobre -->
-    <section id="sobre" class="mb-5">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-6">
-          <h2 class="fw-bold">O que são células-tronco?</h2>
-          <p class="paragrafo">Células-tronco são células não especializadas com capacidade de autorrenovação e diferenciação em diversos tipos celulares. Elas são fundamentais para o reparo dos tecidos e têm aplicação promissora em terapias regenerativas.</p>
-          <ul>
-            <li>Autorrenovação</li>
-            <li>Diferenciação em linhagens específicas</li>
-            <li>Papel em pesquisa e medicina</li>
-          </ul>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="IMAGES/embrionarias.jpeg" alt="Células embrionárias" class="img-fluid rounded shadow-sm">
-        </div>
+  <!-- Logos -->
+  <div class="logos" aria-label="Parceiros e áreas" role="group">
+    <div class="logos-track" aria-hidden="false">
+      <div class="logos-group">
+        <img src="IMAGES/immunology_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt="Imunologia">
+        <img src="IMAGES/coronavirus_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt="Vírus">
+        <img src="IMAGES/microbiology_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt="Microbiologia">
+        <img src="IMAGES/biotech_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt="Biotecnologia">
+        <img src="IMAGES/genetics_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt="Genética">
       </div>
-    </section>
 
-    <!-- Tipos -->
-    <section id="tipos" class="mb-5">
-      <h2 class="fw-bold mb-3">Principais tipos</h2>
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <article class="card h-100 shadow-sm hover-zoom">
-            <img src="IMAGES/embrionarias.jpeg" class="card-img-top" alt="Embriônicas">
-            <div class="card-body">
-              <h5 class="card-title">Embriônicas</h5>
-              <p class="card-text">Altamente pluripotentes, presentes em embriões e com grande capacidade de formar diversos tecidos.</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="card h-100 shadow-sm hover-zoom">
-            <img src="IMAGES/adultas.jpeg" class="card-img-top" alt="Adultas">
-            <div class="card-body">
-              <h5 class="card-title">Adultas (somáticas)</h5>
-              <p class="card-text">Encontradas em tecidos adultos; têm função de manutenção e reparo local.</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="card h-100 shadow-sm hover-zoom">
-            <img src="IMAGES/induzidas.jpeg" class="card-img-top" alt="Induzidas">
-            <div class="card-body">
-              <h5 class="card-title">Induzidas (iPS)</h5>
-              <p class="card-text">Células adultas reprogramadas para um estado pluripotente — úteis em pesquisa e medicina personalizada.</p>
-            </div>
-          </article>
-        </div>
+      <div class="logos-group" aria-hidden="true">
+        <img src="IMAGES/immunology_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt=""/>
+        <img src="IMAGES/coronavirus_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt=""/>
+        <img src="IMAGES/microbiology_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt=""/>
+        <img src="IMAGES/biotech_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt=""/>
+        <img src="IMAGES/genetics_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" width="40" height="40" alt=""/>
       </div>
-    </section>
-
-    <!-- Recursos / CTA -->
-    <section id="recursos" class="mb-5">
-      <div class="bg-dark rounded p-4 text-light shadow-sm">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <h3 class="fw-bold">Explore recursos e materiais</h3>
-            <p class="mb-0">Artigos, vídeos e guias rápidos para estudantes que querem aprender mais sobre células‑tronco e suas aplicações.</p>
-          </div>
-          <div class="col-md-4 text-md-end mt-3 mt-md-0">
-            <a href="#" class="btn btn-outline-light">Ver recursos</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Assuntos / Cards adicionais -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Assuntos em destaque</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="IMAGES/embrionarias.jpeg" class="card-img-top" alt="Características">
-            <div class="card-body">
-              <h5 class="card-title">Características</h5>
-              <p class="card-text">Propriedades básicas, capacidades e limitações.</p>
-              <a href="HTML/caracteristicas.html" class="btn btn-primary btn-sm">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="IMAGES/adultas.jpeg" class="card-img-top" alt="Classificações">
-            <div class="card-body">
-              <h5 class="card-title">Classificações</h5>
-              <p class="card-text">Como são classificadas e onde são encontradas.</p>
-              <a href="#" class="btn btn-primary btn-sm">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="IMAGES/induzidas.jpeg" class="card-img-top" alt="Importância">
-            <div class="card-body">
-              <h5 class="card-title">Importância Biológica</h5>
-              <p class="card-text">Impacto na medicina e na pesquisa científica.</p>
-              <a href="#" class="btn btn-primary btn-sm">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="bg-dark text-light py-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div>
-        <strong>Cellvagens Tronkudos</strong>
-        <div class="small">Projetos educacionais • 2025</div>
-      </div>
-      <nav class="mt-3 mt-md-0">
-        <a href="#" class="text-light me-3">Privacidade</a>
-        <a href="#" class="text-light">Contato</a>
-      </nav>
     </div>
+  </div>
+
+  <!-- Steps -->
+  <section class="steps container">
+    <div class="section-title">
+      <h2>O que diferencia uma <br><span>Célula-tronco?</span></h2>
+      <p class="p_div">Descubra como as células-tronco se destacam e suas aplicações inovadoras.</p>
+    </div>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="fs-1">♻️</div>
+            <h5>Auto-renovação</h5>
+            <p class="p_card">As células-tronco têm a capacidade de se dividir e gerar novas células-tronco idênticas a si 
+              mesmas por longos períodos. Isso significa que elas conseguem se multiplicar sem perder suas 
+              propriedades originais. Já as células normais do corpo possuem um número limitado de divisões 
+              e acabam envelhecendo ou morrendo após certo tempo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="fs-1">🧩</div>
+            <h5>Diferenciação</h5>
+            <p class="p_card">Outra diferença fundamental é a capacidade de diferenciação. As células-tronco podem se 
+              transformar em diferentes tipos de células especializadas, como neurônios, células musculares 
+              ou sanguíneas, dependendo dos sinais que recebem. As células comuns, por outro lado, já têm 
+              uma função definida e não podem mudar de tipo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="fs-1">🧱</div>
+            <h5>Estrutura</h5>
+            <p class="p_card">A estrutura das células-tronco é mais simples e menos especializada. Elas não possuem 
+              características específicas de um tecido, o que as torna mais “neutras” e preparadas para se transformar 
+              em outros tipos celulares. As células normais, ao contrário, têm estruturas adaptadas às suas funções, 
+              como as células musculares, que são alongadas, ou as nervosas, que possuem prolongamentos para transmitir 
+              impulsos elétricos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing container">
+    <div class="section-title">
+      <h2>Tópicos de <span>Estudo!!</span></h2>
+      <p>Explore os principais tópicos relacionados às células-tronco e suas aplicações.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-md-4">
+        <div class="card ">
+          <img src="IMAGES/New way to improve stem-cell transplants.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3>Classificações📚</h3>
+          <p class="p_card">
+            As células-tronco podem ser classificadas de várias maneiras, incluindo sua origem (embrionárias, 
+            adultas, pluripotentes induzidas), seu potencial de diferenciação (totipotentes, pluripotentes, 
+            multipotentes) e sua localização no corpo. Cada tipo tem características e aplicações específicas 
+            na pesquisa e na medicina.
+          </p>
+          <button onclick="location.href='HTML/classificacoes.html'" class="btn btn-purple mt-3">Abrir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card highlight">
+          <img src="IMAGES/potencial bio2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3>Potencial Biológico🧬</h3>
+            <p class="p_card_highlight">
+              O potencial biológico das células-tronco é vasto e promissor. Elas podem se diferenciar em 
+              diversos tipos celulares, o que as torna valiosas para a regeneração de tecidos danificados. 
+              Além disso, seu uso em terapias celulares e medicina regenerativa oferece esperança para o 
+              tratamento de doenças como Parkinson, diabetes e lesões na medula espinhal.
+            </p>
+            <button onclick="location.href='HTML/potencial_biologico.html'" class="btn btn-light mt-3">Abrir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card ">
+          <img src="IMAGES/Emory’s research uncovers new paths for Alzheimer’s treatment.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3>Curiosidades✏️</h3>
+          <p class="p_card">
+            As células-tronco possuem várias curiosidades interessantes. Por exemplo, as células-tronco 
+            hematopoiéticas, encontradas na medula óssea, são responsáveis pela produção de todas as células 
+            sanguíneas do corpo. Além disso, pesquisas recentes indicam que as células-tronco podem desempenhar 
+            um papel na regeneração de tecidos e órgãos, abrindo novas possibilidades para tratamentos médicos.
+          </p>
+          <button onclick="location.href='HTML/curiosidades.html'" class="btn btn-purple mt-3">Abrir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AI Design Assistant. All rights reserved.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="JS/main.js"></script>
 </body>
 </html>
